@@ -49,6 +49,8 @@ import tempfile
 import tensorflow as tf
 import tensorflow.keras.backend as K
 import tensorflow_hub as hub
+from tensorflow.keras import backend
+backend.set_image_data_format('channels_last')
 
 
 _DEFAULT_IMAGE_URL = "https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz"

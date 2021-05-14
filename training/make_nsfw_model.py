@@ -70,6 +70,11 @@ import tempfile
 import tensorflow as tf
 import tensorflow.keras.backend as K
 import tensorflow_hub as hub
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+
+gpus = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(gpus[0], True)
 
 _DEFAULT_HPARAMS = lib.get_default_hparams()
 
